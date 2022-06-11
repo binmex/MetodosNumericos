@@ -42,7 +42,7 @@ print("========================================\nLa raíz exacta es: ", xr,"\n==
 # ===========================================================
 # Grafica
 # ===========================================================
-a = 0  # donde empieza el eje x
+a = -0.5  # donde empieza el eje x
 b = 5  # donde termina el eje x
 n = 50 # la densidad de puntos para la grafica
 xn = np.linspace(a, b, n)  # Se generan los valores de x para construir la grafica

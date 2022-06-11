@@ -1,15 +1,20 @@
 from numpy import sign
 from numpy.lib.scimath import sqrt
 
+#metodo para hallar raices complejas siuuuuuuuuuuuuuuuuuu
+
+#Se ingresa la funcion
+def funcion(x):
+    f = x**2 +2*x+5
+    return f
+
 def muller(x0, x1, x2, tol):
-    error = 1e3
+    error = 0.0001
     x3 = 0
     while error > tol:
         c = funcion(x2)
-        b = ((x0 - x2)**2 * (funcion(x1) - funcion(x2)) - (x1 - x2)**2 *
-             (funcion(x0) - funcion(x2))) / ((x0 - x2) * (x1 - x2) * (x0 - x1))
-        a = ((x1 - x2) * (funcion(x0) - funcion(x2)) - (x0 - x2) *
-             (funcion(x1) - funcion(x2))) / ((x0 - x2) * (x1 - x2) * (x0 - x1))
+        b = ((x0 - x2)**2 * ((funcion(x1)) - (funcion(x2))) - (x1 - x2)**2*((funcion(x0)) - (funcion(x2)))) / ((x0 - x2) * (x1 - x2) * (x0 - x1))
+        a = ((x1 - x2) * (funcion(x0) - funcion(x2)) - (x0 - x2)*(funcion(x1) - funcion(x2))) / ((x0 - x2) * (x1 - x2) * (x0 - x1))
         x3 = x2 - (2 * c) / (b + sign(b) * sqrt(b**2 - 4 * a * c))
         error = abs(x3 - x2)
         x0 = x1
@@ -19,15 +24,12 @@ def muller(x0, x1, x2, tol):
 #===================================================================
 # --------------------------Ingreso de datos------------------------
 #===================================================================
-
-#Se ingresa la funcion
-def funcion(x):
-    f = x ** 2 + 2 * x + 5
-    return f
-
+print('============================================================')
+print('------------------------Metodo Muller-----------------------')
+print('============================================================\n')
 X0 = float(input('ingrese el X0: '))
 X1 = float(input('Ingrese el X1: '))
 X2 = float(input('ingrese el X2: '))
 Tol = float(input('Ingrese la tolerancia: '))
 
-print('La raiz es: '+muller(X0,X1,X2))
+print('La raiz es: ', muller(X0,X1,X2,Tol))
