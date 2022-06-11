@@ -3,22 +3,23 @@ import numpy as np
 from tabulate import tabulate
 
 def function(x):
-    y = x ** 3 + 2 * x ** 2 + 10 * x - 20
+    y = x**(1/3)+1/3-((5*(1/3)**2)/2)
     return y
 
 
 print("==============================\nMETODO DE BISECCIÓN\n==============================\n")
-xi = float(input('Introduce el valor de xi '))
-xu = float(input('Introduce el valor de xu '))
+xi = 0.5
+xu = 0.7
 # error = float((input('Introduce el error ')))
 raiz = []
 biseccion_table = []  # tabla de datos del metodo de biseccion
-err = 100
+err = 100.0
 i = 1
 raiz.append(0)
 # si deseamos reducir el margende error solo cambiamos el condicional del while
 while err > 1.0:
     xr = (xi + xu) / 2.0
+    print(xr)
     if function(xi) * function(xr) > 0:
         xi = xr
         raiz.append(xr)
@@ -42,8 +43,8 @@ print("========================================\nLa raíz exacta es: ", xr,"\n==
 # Grafica
 # ===========================================================
 a = 0  # donde empieza el eje x
-b = 10  # donde termina el eje y
-n = 100  # la densidad de puntos para la grafica
+b = 5  # donde termina el eje x
+n = 50 # la densidad de puntos para la grafica
 xn = np.linspace(a, b, n)  # Se generan los valores de x para construir la grafica
 yn = function(xn)
 plt.plot(xn, yn)  # frafica la funcion (establece taaño plano, traza la grafica)

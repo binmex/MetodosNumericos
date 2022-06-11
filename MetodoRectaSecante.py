@@ -7,7 +7,7 @@ from tabulate import tabulate
 Secante_table = []  # tabla de datos del metodo newton - raphson
 
 def function(x):
-    y = x**2-3*x-4  #formula a evaluar
+    y = -25182 * x - 90 * x ** 2 + 44 * x ** 3 - 8 * x ** 4 + 0.7 * x ** 5  #formula a evaluar
     return y
 
 print("METODO DE RECTA SECANTE")
@@ -39,7 +39,7 @@ print(tabulate(Secante_table, headers=["Iteracion", "x", "error => xact -Xant < 
 print("La raíz exacta encontrada es: ", x2)
 
 a = 0
-b=10
+b=20
 n=100
 xn = np.linspace(a, b, n)     #Se generan los valores de x para construir la grafica
 yn = function(xn)
