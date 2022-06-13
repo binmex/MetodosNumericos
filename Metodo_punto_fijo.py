@@ -3,11 +3,12 @@ import numpy as np
 from tabulate import tabulate
 #funcion original
 def originalFunction(x):
-    f_x=np.cos(x)-3*x
+    f_x=(3/(2*x**1/2)) - 2*x
     return f_x
 #funcion despejada
 def clearanceFunction(x):
-    g_x=np.cos(x)/3
+    #g_x= (3*(x**-1/2)/4)
+    g_x = (3*x**(-1/2))/4
     return g_x
 
 print('====================================================\n'
@@ -26,7 +27,7 @@ while abs(err) > errorF:
     xs = clearanceFunction(x)
     root.append(xs)
     err = ((root[i]-root[i-1])/root[i])*100
-    puntoFijo_table.append([i+1,x,xs, abs(originalFunction(x)),abs(err)])
+    puntoFijo_table.append([i,x,xs, abs(originalFunction(x)),abs(err)])
     x = xs
     i +=1
 #============================================================
