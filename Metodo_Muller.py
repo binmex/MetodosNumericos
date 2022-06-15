@@ -66,7 +66,7 @@ plt.grid(True)
 plt.axhline(0, color="#ff0000")  # establece las lineas de origen en x y el color
 plt.axvline(0, color="#ff0000")  # establece las lineas de origen en y y el color
 plt.plot(r, 0, 'ko', label=("Raiz Biseccion"))  # grafica el punto de corte x,y
-plt.title("Metodo Biseccion")
+plt.title("Metodo Miuler")
 plt.ylabel("Eje X")
 plt.xlabel("Eje y")
 plt.show()

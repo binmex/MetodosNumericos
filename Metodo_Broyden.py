@@ -71,6 +71,13 @@ X , Y = np.meshgrid(x,y)
 Z,W = np.meshgrid(x,y)
 
 #ax.plot(x, y, funGraf(x,y))
+a#x.plot(x, y, funGraf2(x,y))
 ax.plot_surface(X,Y,funGraf(X,Y))
 ax.plot_surface(X,Y,funGraf2(Z,W))
+
+#ax.axvline(0,color="#ff0000")
+#ax.axhline(0,color="#ff0000")
+ax.grid(True)
+ax.scatter(float(X0[0][0]),float(X0[0][0]))
+print('el punto donde se graico es: ',float(X0[0][0]))
 plt.show()
