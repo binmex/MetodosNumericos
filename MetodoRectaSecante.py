@@ -7,7 +7,7 @@ from tabulate import tabulate
 Secante_table = []  # tabla de datos del metodo newton - raphson
 
 def function(x):
-    y = -25182 * x - 90 * x ** 2 + 44 * x ** 3 - 8 * x ** 4 + 0.7 * x ** 5  #formula a evaluar
+    y = 3*x**3+9*x**2+3*x-5  #formula a evaluar
     return y
 
 print("METODO DE RECTA SECANTE")
@@ -21,7 +21,7 @@ raiz.insert(0, 0)
 itera.insert(0, 0)
 
 i = 0
-error = 1
+error = 100
 
 while abs(error) > errorF:
     itera.append(i)

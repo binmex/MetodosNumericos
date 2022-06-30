@@ -8,7 +8,7 @@ muller_table = []  # tabla de datos del metodo de biseccion
 
 # --------Se ingresa la funcion------
 def funcion(x):
-    f = x ** 2 + 4
+    f = x**3+2*x**2+10*x-20
     return f
 
 
@@ -28,7 +28,6 @@ tol = float(input('Ingrese la tolerancia: '))
 error = 1
 x3 = 0
 i = 1
-
 while error > tol:
     c = funcion(x2)
     b = ((x0 - x2) ** 2 * ((funcion(x1)) - (funcion(x2))) - (x1 - x2) ** 2 * ((funcion(x0)) - (funcion(x2)))) / (

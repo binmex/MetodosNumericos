@@ -53,12 +53,12 @@ x1 = float(input('ingrese el valor inicial'))
 #f(x) formula original
 x = np.linspace(a, b, n)     #Se generan los valores de x para construir la grafica
 def f(xs):
-  f_x = xs**3-xs-1  #Valor de la funcion para cada x
+  f_x = (1/3)*xs**3+(2*xs)/3-4*xs**2+3  #Valor de la funcion para cada x
   return (f_x)
 
 #f'(x) - Derivada de f(x)
 def f1(xs):
-  f1_x = 3*xs**2-1
+  f1_x = xs**2-2*xs+2/3
   return (f1_x)
 
 
@@ -78,5 +78,3 @@ plt.title("Grafica Newton Rapson") #Titulo del grafico
 plt.legend()                    #Leyendas
 plt.grid(True)
 plt.show()                      #Mostrar grafico
-
-
