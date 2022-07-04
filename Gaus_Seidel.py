@@ -8,12 +8,15 @@ vector = numpy.zeros((n))  # crear vector con dimension n  osea n columnas lo ll
 vectorNuevo = numpy.zeros((m))  # crear vector con dimension n  osea n columnas lo llena de ceros
 x = numpy.zeros((m))
 for i in range(0, m):
+    print('----------------------Vector postulado como solucion----------------------')
     print('Introduce vector inicial o iteracion 1 ')
     x[(i)] = float(input("Elemento a[" + str(i + 1) + "] "))
 
 error = []
-print('Método de Gauss-Seidel')
-print('Introduce la matriz de coeficientes y el vector solución')
+print('----------------------Método de Gauss-Seidel----------------------')
+print('***El elemento a es la matriz del sistema de ecuaciones')
+print('***el vector b es el vector independiente o las igualdades de las ecuaciones\n')
+print('Introduce la matriz de coeficientes y el vector solución\n')
 for r in range(0, m):  # para pedir los coeficietes de la matriz
     for c in range(0, n):
         matrix[(r), (c)] = float(input("Elemento a[" + str(r + 1) + str(c + 1) + "] "))
