@@ -12,10 +12,11 @@ def solucion(x,y):
 h = float(input("tamaño de paso: "))
 s = float(input("hasta que valor?: "))
 
-#cuantos espacios o iteraciones se vana a ahcer
+#cuantos espacios o iteraciones se vana a hacer
 n = (s/h)+1
 x = np.zeros(int(n))
 y = np.zeros(int(n))
+#vector para comprobar la solucion
 ys = np.zeros(int(n))
 
 # valores de inicio
@@ -25,6 +26,7 @@ print(x[0],y[0])
 for i in np.arange(1,int(n)):
     y[i] = y[i-1]+(funcionx(x[i-1],y[i-1]))*h
     x[i] = x[i-1]+h
+    #llamar el metodo para calcular la solucion
     ys[i] = solucion(x[i-1], y[i-1])
     euler_table.append([i, x[i], y[i]])
     #print(x[i], y[i])

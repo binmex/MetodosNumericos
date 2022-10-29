@@ -19,7 +19,7 @@ def y(x, y):
 xi = 0                            #Valor inicial de 'x'
 yi = 2                           #Valor inicial de 'y'
 xf = 1                            #Valor final de 'x'
-h = 0.000001                           #Tamaño de paso
+h = 0.25                           #Tamaño de paso
 
 n = (xf - xi)/h                                     #Cantidad de pasos o iteraciones de la aproximacion de la funcion
 x = np.linspace(xi, xf, int(n+1))
