@@ -1,5 +1,6 @@
 #FUNCION DEL METODO DEL TRAPECIO
 import numpy as np
+import matplotlib.pyplot as plt
 
 def integracion_trapecio(x, y):
   I = []                        #Integral
@@ -30,3 +31,16 @@ y = 0.2 + 25*x - 200*x**2 + 675*x**3 - 900*x**4 + 400*x**5        #Funcion del p
 
 #SOLUCION
 print(integracion_trapecio(x, y))
+def funcion(x):
+  f= 0.2 + 25*x - 200*x**2 + 675*x**3 - 900*x**4 + 400*x**5
+  return f
+
+yn = funcion(x)
+plt.plot(x, yn)  # frafica la funcion (establece taaño plano, traza la grafica)
+plt.grid(True)
+plt.axhline(0, color="#ff0000")  # establece las lineas de origen en x y el color
+plt.axvline(0, color="#ff0000")  # establece las lineas de origen en y y el color
+plt.title("Metodo trapecio")
+plt.ylabel("Eje X")
+plt.xlabel("Eje y")
+plt.show()

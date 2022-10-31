@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def integracion_trapecio(x, y):
   I = []                        #Integral
