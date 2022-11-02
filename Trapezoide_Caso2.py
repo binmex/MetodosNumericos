@@ -12,7 +12,7 @@ b = 4
 
 #segmentos o trapecios a formar
 #entre mas trapecios mas precicion
-trapecios = 2000
+trapecios = 6
 
 h = (b-a)/trapecios
 
