@@ -141,6 +141,7 @@ x1_RK2, yf1_RK2, k11_RK2, k12_RK2, e1_RK2 = RK2(xi, yi, xf, h1)
 #Runge - Kutta de 4to orden
 x1, yf1, k11, k12, k13, k14, e1 = RK4(xi, yi, xf, h1)
 
+
 #=======================================================
 #Tabla de datos
 #=======================================================
@@ -157,7 +158,7 @@ tabla1 = []                         #tabla de datos
 for i in range(n1):
   tabla1.append([x1_RK1[i], yf1_RK1[i], k11_RK1[i], e1_RK1[i]])
 
-print("tabla de datos 1")
+print("tabla de datos 1 (orden 1)")
 print(" ")
 print(tabulate(tabla1, headers=['x', 'y', 'k1', 'er(%)']))
 print(" ")
@@ -177,7 +178,7 @@ tabla1 = []                         #tabla de datos
 for i in range(n1):
   tabla1.append([x1_RK2[i], yf1_RK2[i], k11_RK2[i], k12_RK2[i], e1_RK2[i]])
 
-print("tabla de datos 1")
+print("tabla de datos 2 (orden 2)")
 print(" ")
 print(tabulate(tabla1, headers=['x', 'y', 'k1', 'k2', 'er(%)']))
 print(" ")
@@ -197,7 +198,7 @@ tabla1 = []                         #tabla de datos
 for i in range(n1):
   tabla1.append([x1[i], yf1[i], k11[i], k12[i], k13[i], k14[i], e1[i]])
 
-print("tabla de datos 1")
+print("tabla de datos 3 (orden 4)")
 print(" ")
 print(tabulate(tabla1, headers=['x', 'y', 'k1', 'k2', 'k3', 'k4', 'er(%)']))
 print(" ")
