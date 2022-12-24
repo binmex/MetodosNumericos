@@ -1,5 +1,5 @@
 # MetodosNumericos
-Codigo de metos numericos para encontrar la raiz de funciones
+Codigo de metodos numericos.
 
 # Robinson Aguilar
  - estudiante de ingenieria de sistemas y computacion
